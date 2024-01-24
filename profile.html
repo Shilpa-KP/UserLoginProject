@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>
+            Welcome to our Website
+            Name:
+            <script>
+                document.write(localStorage.getItem('name'))
+            </script>
+        </h2>
+         <h3>
+            Email:
+            <script>
+                document.write(localStorage.getItem('email'))
+            </script>
+        </h3>
+        <button type="button" id="btnlogout" class="btn btn-info" onclick="logout()">logout</button>
+    </div>
+</div>
+</body>
+<script>
+    function logout()
+    {
+        location.href="login.html";
+    }
+</script>
+</html>
